@@ -1,0 +1,6 @@
+{
+  "name": "Business Intelligence & Lead Generation Platform",
+  "description": "A high-performance lead generation and business intelligence platform to collect, filter, analyze, and export enriched public business listings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
