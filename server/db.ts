@@ -292,11 +292,11 @@ class RelationalDatabase {
   // Load Database from disk
   private loadDatabase() {
     try {
-      if (!fs.existsSync(DB_DIR)) {
+      if (!process.env.VERCEL && !fs.existsSync(DB_DIR)) {
         fs.mkdirSync(DB_DIR, { recursive: true });
       }
 
-      if (fs.existsSync(DB_FILE)) {
+      if (!process.env.VERCEL && fs.existsSync(DB_FILE)) {
         const raw = fs.readFileSync(DB_FILE, "utf-8");
         const parsed = JSON.parse(raw);
         this.schema = {

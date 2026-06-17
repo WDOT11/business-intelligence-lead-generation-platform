@@ -105,7 +105,7 @@ app.get("/api/db/stats", (req, res) => {
 app.post("/api/db/clear", (req, res) => {
   try {
     const dbFile = path.join(process.cwd(), "data", "database.json");
-    if (fs.existsSync(dbFile)) {
+    if (!process.env.VERCEL && fs.existsSync(dbFile)) {
       // Re-initialize with clear / seed default
       fs.writeFileSync(dbFile, JSON.stringify({
         businesses: [],

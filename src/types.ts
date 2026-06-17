@@ -194,7 +194,7 @@ export interface ScrapingJob {
   keyword: string;
   city: string;
   limit: number;
-  status: "idle" | "running" | "completed" | "failed";
+  status: "idle" | "running" | "completed" | "failed" | "cancelled";
   progress: number; // records found so far
   totalRequested: number;
   startedAt: string;
