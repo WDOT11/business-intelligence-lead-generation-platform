@@ -1,8 +1,13 @@
 {
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "../dist/server.cjs"
+    }
+  },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/index.ts"
+      "destination": "/api/index.js"
     }
   ]
 }
