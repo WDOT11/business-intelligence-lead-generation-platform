@@ -32,12 +32,7 @@ function getGeminiClient() {
   }
   if (!aiClient) {
     aiClient = new GoogleGenAI({
-      apiKey,
-      httpOptions: {
-        headers: {
-          "User-Agent": "aistudio-build",
-        },
-      },
+      apiKey
     });
   }
   return aiClient;
