@@ -7,9 +7,9 @@ import express from "express";
 import fs from "fs";
 import path from "path";
 import dotenv from "dotenv";
+import { dbInstance } from "./server/db.js";
 import { GoogleGenAI, Type } from "@google/genai";
-import { dbInstance } from "./server/db";
-import { EnrichedBusinessLead, SearchFilters, ScrapingJob } from "./src/types";
+import { EnrichedBusinessLead, SearchFilters, ScrapingJob } from "./src/types.js";
 
 // Load environment variables
 dotenv.config();

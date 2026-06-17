@@ -17,7 +17,7 @@ import {
   BusinessContact,
   EnrichedBusinessLead,
   SearchFilters
-} from "../src/types";
+} from "../src/types.js";
 
 // DB Storage Layout
 interface RelationalSchema {
